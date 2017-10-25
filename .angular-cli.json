@@ -1,0 +1,31 @@
+{
+  "$schema": "./node_modules/@angular/cli/lib/config/schema.json",
+  "project": {
+    "name": "boilerplate"
+  },
+  "apps": [
+    {
+      "root": "src",
+      "outDir": "aot",
+      "assets": [
+        "assets",
+        "favicon.ico"
+      ],
+      "index": "index.html",
+      "main": "main.ts",
+      "polyfills": "polyfills.ts",
+      "test": "test.ts",
+      "tsconfig": "tsconfig-aot.json",
+      "prefix": "app",
+      "scripts": []
+    }
+  ],
+  "defaults": {
+    "styleExt": "css",
+    "component": {
+    }
+  },
+  "warnings": {
+    "typescriptMismatch": false
+  }
+}

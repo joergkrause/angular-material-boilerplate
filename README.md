@@ -1,6 +1,6 @@
 # Angular 4 + Material 2 Boilerplate
 
-This is for teachung and learnig purpose. It shows that you can bring down an Angular + Material project to roughly 1.2 MB raw code and 0.4 MB gzipped. I'm going to improve this further to show the ability to shrink a fully equipped Angular environment for production.
+This is for teachung and learnig purpose. It shows that you can bring down an Angular + Material project to roughly 1.2 MB raw code and less than 0.4 MB gzipped. I'm going to improve this further to show the ability to shrink a fully equipped Angular environment for production.
 
 ## Goal
 
@@ -10,7 +10,12 @@ This project shows a simple Angular setup with a few parts almost everybody need
 * Material 2
 * Gulp Build System
 
-The main focus is size of the final app.
+The main focus is size of the final app. Today we're here:
+
+* main.bundle.js.gz : 288 KB (All of Angular and my app)
+* vendor.js.gz : 59 KB (all polyfills)
+* site.css : 7 KB (Material's CSS)
+
 
 ## Why Gulp?
 

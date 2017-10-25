@@ -29,7 +29,7 @@ gulp.task('copy:js', function () {
 });
 
 gulp.task('copy:index', function () {
-  return gulp.src(['./src/index.html', './src/systemjs.config.js'])
+  return gulp.src(['./src/index.html'])
     .pipe(gulp.dest('./dist'));
 });
 
@@ -40,20 +40,6 @@ gulp.task('copy:angular', function () {
   ])
     .pipe(uglify())
     .pipe(gulp.dest('./dist/assets/js/lib/@angular'));
-});
-
-gulp.task('copy:rxjs', function () {
-  var builder = new systemBuilder('./', {
-    paths: { 'rxjs/*': `./node_modules/rxjs/*.js` },
-    map: { "rxjs": `./node_modules/rxjs` },
-    packages: { "rxjs": { main: 'Rx.js', defaultExtension: "js" } }
-  });
-  // create the bundle we use from systemjs.config.js
-  return builder.bundle('rxjs', './dist/assets/js/lib/rxjs/bundles/rx.min.js', {
-    sourceMaps: false,
-    minify: true,
-    mangle: true
-  });
 });
 
 gulp.task('copy:html', function () {
@@ -108,7 +94,9 @@ gulp.task('bundle:create', function () {
   return builder
     .buildStatic('./dist/app/main.js', './dist/main.bundle.js', {
       sourceMaps: true,
-      minify: true
+      minify: true,
+      mangle: true,
+      rollup: true
     })
     .then(function () {
       console.log('Bundle completed');
@@ -132,8 +120,11 @@ gulp.task('sass', function () {
     .pipe(gulp.dest('./dist'));
 });
 
+gulp.task('tidyup', function(){
+  return del(['./dist/app/**', './dist/buildingblocks/**', './dist/shared/**'])
+});
 
-gulp.task('copy:debug', ['copy:js', 'copy:html', 'copy:index', 'copy:angular', 'copy:rxjs']);
+gulp.task('copy:debug', ['copy:js', 'copy:html', 'copy:index', 'copy:angular']);
 gulp.task('copy', ['copy:js', 'copy:html', 'copy:index']);
 
-gulp.task('default', sequence('copy', 'sass', 'pack', 'bundle'));
+gulp.task('default', sequence('copy', 'sass', 'pack', 'bundle', 'tidyup'));
