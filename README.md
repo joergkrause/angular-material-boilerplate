@@ -1,6 +1,6 @@
 # Angular 4 + Material 2 Boilerplate
 
-This is for teachung and learnig purpose. It shows that you can bring down an Angular + Material project to roughly 1.2 MB raw code and less than 0.4 MB gzipped. I'm going to improve this further to show the ability to shrink a fully equipped Angular environment for production.
+This is for teaching and learning purpose. It shows that you can bring down an Angular + Material project to roughly 1.2 MB raw code and less than 0.4 MB gzipped. I'm going to improve this further to show the ability to shrink a fully equipped Angular environment for production.
 
 ## Goal
 

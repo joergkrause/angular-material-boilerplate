@@ -92,7 +92,7 @@ gulp.task('bundle:create', function () {
   //builder.reset();
   builder.loader.defaultJSExtensions = true;
   return builder
-    .buildStatic('./dist/app/main.js', './dist/main.bundle.js', {
+    .buildStatic('./dist/main.js', './dist/main.bundle.js', {
       sourceMaps: true,
       minify: true,
       mangle: true,
