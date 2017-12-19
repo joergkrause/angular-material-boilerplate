@@ -1,21 +1,22 @@
-# Angular 4 + Material 2 Boilerplate
+# Angular 5 + Material 5 Boilerplate
 
-This is for teaching and learning purpose. It shows that you can bring down an Angular + Material project to roughly 1.2 MB raw code and less than 0.4 MB gzipped. I'm going to improve this further to show the ability to shrink a fully equipped Angular environment for production.
+This is for teaching and learning purpose. It shows that you can bring down an Angular + Material project to roughly 1.3 MB raw code and less than 0.4 MB gzipped. I'm going to improve this further to show the ability to shrink a fully equipped Angular environment for production.
 
 ## Goal
 
 This project shows a simple Angular setup with a few parts almost everybody needs:
 
-* Angular 4.4
-* Material 2
+* Angular 5.2
+* Material 5.0
 * Gulp Build System
 
 The main focus is size of the final app. Today we're here:
 
-* main.bundle.js.gz : 288 KB (All of Angular and my app) -- 1.29 MB unzipped
+* main.bundle.js.gz : 304 KB (All of Angular and my app) -- 1.35 MB unzipped
 * vendor.js.gz : 59 KB (all polyfills) -- 182 KB unzipped
 * site.css : 7 KB (Material's CSS) -- 43 KB unzipped
 
+> If one wonders why it's bigger as comparable projects remember that the whole CDK core is in here to support any material derived components. This is a much more realistic approach than others do to shrink an app as much as possible but forget that the outcome has almost no relation to real projects. 
 
 ## Why Gulp?
 
