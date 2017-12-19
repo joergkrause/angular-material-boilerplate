@@ -12,9 +12,9 @@ This project shows a simple Angular setup with a few parts almost everybody need
 
 The main focus is size of the final app. Today we're here:
 
-* main.bundle.js.gz : 288 KB (All of Angular and my app)
-* vendor.js.gz : 59 KB (all polyfills)
-* site.css : 7 KB (Material's CSS)
+* main.bundle.js.gz : 288 KB (All of Angular and my app) -- 1.29 MB unzipped
+* vendor.js.gz : 59 KB (all polyfills) -- 182 KB unzipped
+* site.css : 7 KB (Material's CSS) -- 43 KB unzipped
 
 
 ## Why Gulp?

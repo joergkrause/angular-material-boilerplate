@@ -1,5 +1,9 @@
 # Proc
 dist/
+# Generated files by ngc
+src/**/*.ngfactory.ts
+src/**/*.ngstyle.ts
+src/**/*.ngsummary.json
 
 # Logs
 logs
