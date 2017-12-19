@@ -78,7 +78,7 @@ gulp.task('bundle:create', function () {
       '@angular/animations/browser': 'npm:@angular/animations/bundles/animations-browser.umd.js',
       '@angular/platform-browser/animations': 'npm:@angular/platform-browser/bundles/platform-browser-animations.umd.js', '@angular/core': 'npm:@angular/core/bundles/core.umd.js',
       '@angular/common': 'npm:@angular/common/bundles/common.umd.js',
-      '@angular/common/http': 'npm:@angular/common/bundles/common.umd.js',
+      '@angular/common/http': 'npm:@angular/common/bundles/common-http.umd.js',
       '@angular/compiler': 'npm:@angular/compiler/bundles/compiler.umd.js',
       '@angular/platform-browser': 'npm:@angular/platform-browser/bundles/platform-browser.umd.js',
       '@angular/platform-browser-dynamic': 'npm:@angular/platform-browser-dynamic/bundles/platform-browser-dynamic.umd.js',
@@ -106,7 +106,8 @@ gulp.task('bundle:create', function () {
       '@angular/cdk/collections': 'npm:/@angular/cdk/bundles/cdk-collections.umd.js',
       '@angular/cdk/rxjs': 'npm:/@angular/cdk/bundles/cdk-rxjs.umd.js',
       '@angular/cdk/table': 'npm:/@angular/cdk/bundles/cdk-table.umd.js',
-      'rxjs': 'npm:rxjs'
+      'rxjs': 'npm:rxjs',
+      'tslib': 'npm:tslib/tslib.js'
     },
     packages: {
       "app": { main: 'main.js', defaultExtension: "js" },
