@@ -10,11 +10,26 @@ This project shows a simple Angular setup with a few parts almost everybody need
 * Material 5.0
 * Gulp Build System
 
-The main focus is size of the final app. Today we're here:
+The main focus is size of the final app. The project has two modes it can be compiled in:
 
-* main.bundle.js.gz : 304 KB (All of Angular and my app) -- 1.35 MB unzipped
+1. Classic
+2. AOT
+
+Even AOT is build on top of SystemJS and Gulp. The outcome is, of course, different:
+
+1. Classic Compilation using *tsc* and rollup with *systemBuilder*:
+
+* main.bundle.js.gz : 304 KB (all of Angular and my app) -- 1.35 MB unzipped
 * vendor.js.gz : 59 KB (all polyfills) -- 182 KB unzipped
 * site.css : 7 KB (Material's CSS) -- 43 KB unzipped
+
+2. AOT Compilation with *ngc* and rollup with *systemBuilder*:
+
+* main.bundle.js.gz : 225 KB (all of Angular and my app) -- 1.05 MB unzipped
+* vendor.js.gz : 59 KB (all polyfills) -- 182 KB unzipped
+* site.css : 7 KB (Material's CSS) -- 43 KB unzipped
+
+This is slightly smaller and loads slightly faster. The difference is nt revolutionary, but it's there.
 
 > If one wonders why it's bigger as comparable projects remember that the whole CDK core is in here to support any material derived components. This is a much more realistic approach than others do to shrink an app as much as possible but forget that the outcome has almost no relation to real projects. 
 
@@ -36,8 +51,30 @@ Clone the repo. Run this:
 
 ~~~
 npm install
+~~~
+
+Then decide to test either classic compilation or AOT compilation. The classic approach is more robust and can handle almost everything TypeScript can do. Here you go:
+
+~~~
+npm run build
+~~~
+
+The AOT approach is a bit more strange in some parts, it may require tweaking code here and there. To build this version, which produces a 30% smaller outcome, type this:
+
+~~~
+npm run aot
+~~~
+
+Once the ./dist folder appears and there are no errors at all, just run the server:
+
+~~~
 npm start
 ~~~
 
 Navigate to browser `http://localhost:3001`. That's it.
 
+## What is NOT in there
+
+This is NOT a WebPack project. This is intentionally. I'mM using other stuff to have more control and better insight, which is good for learning. 
+
+This project has no hotloading, hotserving and other cool stuff. This is a demo project to understand the build and bundle procedures. It's not for production use.

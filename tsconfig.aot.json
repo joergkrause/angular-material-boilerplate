@@ -18,7 +18,7 @@
     ]
   },
   "files": [
-    "./src/main.ts"
+    "./src/main.aot.ts"
   ],
   "compileOnSave": false,
   "exclude": [
@@ -26,6 +26,10 @@
   ],
   "types": [
     "node"
-  ]
+  ],
+  "angularCompilerOptions": {
+   "debug": false,
+   "skipMetadataEmit": true
+  }
 }
 
