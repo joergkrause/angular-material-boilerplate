@@ -48,11 +48,10 @@ var aot = gulp.task('bundle-aot:create', function () {
       "rxjs": { main: "Rx.js", defaultExtension: "js" }
     }
   });
-  //builder.reset();
   builder.loader.defaultJSExtensions = true;
   return builder
     .buildStatic('./dist/src/main.aot.js', './dist/main.bundle.js', {
-      sourceMaps: false,
+      sourceMaps: true,
       minify: true,
       mangle: true,
       rollup: true

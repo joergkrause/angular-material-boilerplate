@@ -16,11 +16,9 @@ The creating procedure has three steps:
 2. Compile
 3. Bundle
 
-#### Clean Up
+See [here for a map](classic-map.html) of the classic bundle.
 
-#### Compile
-
-#### Bundle
+See [here for a map](aot-map.html) of the aot bundle.
 
 The bundler is [SystemJS-Builder](https://github.com/systemjs/builder) from the [SystemJs](https://github.com/systemjs/systemjs) project.
 

@@ -13,9 +13,9 @@ This project shows a simple Angular setup with a few parts almost everybody need
 The main focus is size of the final app. The project has two modes it can be compiled in:
 
 1. Classic
-2. AOT (Ahead Of Time)
+2. AoT (Ahead Of Time)
 
-Even AOT is build on top of SystemJS and Gulp. The outcome is, of course, different:
+Even AoT is build on top of SystemJS and Gulp. The outcome is, of course, different:
 
 1. Classic Compilation using *tsc* and rollup with *systemJSBuilder*:
 
@@ -23,13 +23,13 @@ Even AOT is build on top of SystemJS and Gulp. The outcome is, of course, differ
 * vendor.js.gz : 59 KB (all polyfills) -- 182 KB unzipped
 * site.css : 7 KB (Material's CSS) -- 43 KB unzipped
 
-2. AOT Compilation with *ngc* and rollup with *systemJSBuilder*:
+2. AoT Compilation with *ngc* and rollup with *systemJSBuilder*:
 
 * main.bundle.js.gz : 224 KB (all of Angular and my app) -- 1035 KB unzipped
 * vendor.js.gz : 59 KB (all polyfills) -- 182 KB unzipped
 * site.css : 7 KB (Material's CSS) -- 43 KB unzipped
 
-This is slightly smaller and loads slightly faster. The difference is nt revolutionary, but it's there.
+This is slightly smaller and loads slightly faster. The difference is not revolutionary, but it's there. In fact, although you’re able to get rid of the compiler, AoT can increases your bundle size. What AoT does is to generate code for your templates and DI, so if you **have a lot of components** the JavaScript generated for the templates may **exceed** the size of the compiler. This is why we need both options.
 
 > If one wonders why it's bigger as comparable projects remember that the whole CDK core is in here to support any material derived components. This is a much more realistic approach than others do to shrink an app as much as possible but forget that the outcome has almost no relation to real projects. 
 

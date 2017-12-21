@@ -54,11 +54,10 @@ gulp.task('bundle:create', function () {
       "rxjs": { main: "Rx.js", defaultExtension: "js" }
     }
   });
-  //builder.reset();
   builder.loader.defaultJSExtensions = true;
   return builder
     .buildStatic('./dist/main.js', './dist/main.bundle.js', {
-      sourceMaps: false,
+      sourceMaps: true,
       minify: true,
       mangle: true,
       rollup: true
