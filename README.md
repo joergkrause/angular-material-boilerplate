@@ -1,6 +1,6 @@
 # Angular 5 + Material 5 Boilerplate
 
-This is for teaching and learning purpose. It shows that you can bring down an Angular + Material project to roughly 1.3 MB raw code and less than 0.4 MB gzipped. I'm going to improve this further to show the ability to shrink a fully equipped Angular environment for production.
+This is for teaching and learning purpose. It shows that you can bring down an Angular + Material project to roughly 1.3 MB raw code and less than 0.3 MB gzipped. I'm going to improve this further to show the ability to shrink a fully equipped Angular environment for production.
 
 ## Goal
 
@@ -13,17 +13,17 @@ This project shows a simple Angular setup with a few parts almost everybody need
 The main focus is size of the final app. The project has two modes it can be compiled in:
 
 1. Classic
-2. AOT
+2. AOT (Ahead Of Time)
 
 Even AOT is build on top of SystemJS and Gulp. The outcome is, of course, different:
 
-1. Classic Compilation using *tsc* and rollup with *systemBuilder*:
+1. Classic Compilation using *tsc* and rollup with *systemJSBuilder*:
 
-* main.bundle.js.gz : 304 KB (all of Angular and my app) -- 1355 KB unzipped
+* main.bundle.js.gz : 311 KB (all of Angular and my app) -- 1370 KB unzipped
 * vendor.js.gz : 59 KB (all polyfills) -- 182 KB unzipped
 * site.css : 7 KB (Material's CSS) -- 43 KB unzipped
 
-2. AOT Compilation with *ngc* and rollup with *systemBuilder*:
+2. AOT Compilation with *ngc* and rollup with *systemJSBuilder*:
 
 * main.bundle.js.gz : 224 KB (all of Angular and my app) -- 1035 KB unzipped
 * vendor.js.gz : 59 KB (all polyfills) -- 182 KB unzipped
@@ -32,6 +32,14 @@ Even AOT is build on top of SystemJS and Gulp. The outcome is, of course, differ
 This is slightly smaller and loads slightly faster. The difference is nt revolutionary, but it's there.
 
 > If one wonders why it's bigger as comparable projects remember that the whole CDK core is in here to support any material derived components. This is a much more realistic approach than others do to shrink an app as much as possible but forget that the outcome has almost no relation to real projects. 
+
+## How it Works?
+
+See [this document](docs/how-it-works.md) for details about the used techniques.
+
+The outcome is extremely simple and it's not really an app. However, it shows that it works:
+
+![Figure: Screenshot](docs/demo.png)
 
 ## Why Gulp?
 
@@ -75,6 +83,7 @@ Navigate to browser `http://localhost:3001`. That's it.
 
 ## What is NOT in there
 
-This is NOT a WebPack project. This is intentionally. I'mM using other stuff to have more control and better insight, which is good for learning. 
+This is NOT a WebPack project. This is intentionally. I'm using other stuff to have more control and better insight, which is good for learning. 
 
 This project has no hotloading, hotserving, no unit testing and other cool stuff. This is a demo project to understand the build and bundle procedures. It's not for production use.
+
