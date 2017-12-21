@@ -1,5 +1,6 @@
 # Proc
 dist/
+temp/
 # Generated files by ngc
 src/**/*.ngfactory.ts
 src/**/*.ngstyle.ts

@@ -19,13 +19,13 @@ Even AOT is build on top of SystemJS and Gulp. The outcome is, of course, differ
 
 1. Classic Compilation using *tsc* and rollup with *systemBuilder*:
 
-* main.bundle.js.gz : 304 KB (all of Angular and my app) -- 1.35 MB unzipped
+* main.bundle.js.gz : 304 KB (all of Angular and my app) -- 1355 KB unzipped
 * vendor.js.gz : 59 KB (all polyfills) -- 182 KB unzipped
 * site.css : 7 KB (Material's CSS) -- 43 KB unzipped
 
 2. AOT Compilation with *ngc* and rollup with *systemBuilder*:
 
-* main.bundle.js.gz : 225 KB (all of Angular and my app) -- 1.05 MB unzipped
+* main.bundle.js.gz : 224 KB (all of Angular and my app) -- 1035 KB unzipped
 * vendor.js.gz : 59 KB (all polyfills) -- 182 KB unzipped
 * site.css : 7 KB (Material's CSS) -- 43 KB unzipped
 
@@ -77,4 +77,4 @@ Navigate to browser `http://localhost:3001`. That's it.
 
 This is NOT a WebPack project. This is intentionally. I'mM using other stuff to have more control and better insight, which is good for learning. 
 
-This project has no hotloading, hotserving and other cool stuff. This is a demo project to understand the build and bundle procedures. It's not for production use.
+This project has no hotloading, hotserving, no unit testing and other cool stuff. This is a demo project to understand the build and bundle procedures. It's not for production use.

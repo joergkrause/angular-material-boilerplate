@@ -42,7 +42,7 @@ function inlineResources(globs) {
     }
 
     const files = glob.sync(pattern, {})
-      .filter(name => /\.js$/.test(name));  // Matches only JavaScript files.
+      .filter(name => /\.[jt]s$/.test(name));  // Matches only JavaScript/TypeScript files.
 
     // Generate all files content with inlined templates.
     return Promise.all(files.map(filePath => {
