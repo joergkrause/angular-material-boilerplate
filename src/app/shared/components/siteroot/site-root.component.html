@@ -5,31 +5,27 @@
     </span>
     &nbsp;
     <span>Material 5 running on Angular 5</span>
-    &nbsp;
+    <span fxLayoutAlign="space-between center"></span>
     <div class="menu-align">
       <button mat-icon-button [mat-menu-trigger-for]="menu">
         <mat-icon>more_vert</mat-icon>
       </button>
+      <mat-menu x-position="before" #menu="matMenu">
+        <button mat-menu-item routerLink="/forms">
+          <mat-icon>text_format</mat-icon>
+          <span>Form Controls</span>
+        </button>
+        <button mat-menu-item routerLink="/indicator">
+          <mat-icon>fast_forward</mat-icon>
+          <span>Indicator Controls</span>
+        </button>
+        <button mat-menu-item routerLink="/layout">
+          <mat-icon>picture_in_picture</mat-icon>
+          <span>Layout Controls</span>
+        </button>
+      </mat-menu>
     </div>
   </mat-toolbar>
-  <mat-menu x-position="before" #menu="matMenu">
-    <button mat-menu-item routerLink="/forms">
-      <mat-icon>text format</mat-icon>
-      <span>Form Controls</span>
-    </button>
-    <button mat-menu-item routerLink="/indicator">
-      <mat-icon>fast forward</mat-icon>
-      <span>Indicator Controls</span>
-    </button>
-    <button mat-menu-item routerLink="/layout">
-      <mat-icon>picture in picture</mat-icon>
-      <span>Layout Controls</span>
-    </button>    
-    <button mat-menu-item >
-      <mat-icon>picture in picture</mat-icon>
-      <span>Layout Controls</span>
-    </button>
-  </mat-menu>
   <router-outlet></router-outlet>
   <span class="done">
     <button mat-fab>

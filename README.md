@@ -41,9 +41,15 @@ The tree shaking (rollup) has almost no influence as the settings in SystemJS in
 
 2. AoT Compilation with *ngc* and rollup with *systemJSBuilder*:
 
+The results with just one component and only icons and buttons are as small as this:
+
 * main.bundle.js.gz : 224 KB (all of Angular and my app) -- 1035 KB unzipped
 * vendor.js.gz : 59 KB (all polyfills) -- 182 KB unzipped
 * site.css : 7 KB (Material's CSS) -- 43 KB unzipped
+
+To be more realistic, I have added more of the material controls, the router and four components (numbers in KB):
+
+The bundled, minified, mangled, and zipped version is then: **272 KB**. Definitly an acceptable result.
 
 This is slightly smaller and loads slightly faster. The difference is not revolutionary, but it's there. In fact, although you’re able to get rid of the compiler, AoT can increases your bundle size. What AoT does is to generate code for your templates and DI, so if you **have a lot of components** the JavaScript generated for the templates may **exceed** the size of the compiler. This is why we need both options.
 

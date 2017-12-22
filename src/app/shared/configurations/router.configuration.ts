@@ -1,4 +1,4 @@
-import { Routes } from '@angular/router';
+import { Routes, RouterModule } from '@angular/router';
 
 import * as cmp from '../components/index';
 
@@ -26,4 +26,4 @@ const routes: Routes = [
   }
 ];
 
-export default routes;
+export const routerModule = RouterModule.forRoot(routes);

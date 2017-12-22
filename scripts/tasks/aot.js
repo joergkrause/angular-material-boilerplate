@@ -33,6 +33,7 @@ var aot = gulp.task('bundle-aot:create', function () {
       '@angular/material/input': 'npm:@angular/material/bundles/material.umd.js',
       '@angular/material/form-field': 'npm:@angular/material/bundles/material.umd.js',
       '@angular/material/select': 'npm:@angular/material/bundles/material.umd.js',
+      '@angular/material/dialog': 'npm:@angular/material/bundles/material.umd.js',
       '@angular/material/progress-spinner': 'npm:@angular/material/bundles/material.umd.js',
       '@angular/cdk': 'npm:@angular/cdk/bundles/cdk.umd.js',
       '@angular/cdk/a11y': 'npm:/@angular/cdk/bundles/cdk-a11y.umd.js',
