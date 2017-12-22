@@ -23,6 +23,17 @@ Even AoT is build on top of SystemJS and Gulp. The outcome is, of course, differ
 * vendor.js.gz : 59 KB (all polyfills) -- 182 KB unzipped
 * site.css : 7 KB (Material's CSS) -- 43 KB unzipped
 
+|          | Bundled | Minified| Mangled | Zipped  |
+|----------|---------|---------|---------|---------|
+| Bundled  |    x    |         |         |         |  
+|    +     |---------|---------|---------|---------|
+| Minified |         |    x    |         |         |
+|    +     |---------|---------|---------|---------|
+| Mangled  |         |         |    x    |         |
+|    +     |---------|---------|---------|---------| 
+| Zipped   |         |         |         |    x    | 
+
+
 2. AoT Compilation with *ngc* and rollup with *systemJSBuilder*:
 
 * main.bundle.js.gz : 224 KB (all of Angular and my app) -- 1035 KB unzipped
