@@ -2,3 +2,7 @@
   background-color: #AAAAAA;
   padding: 0 15px 0 15px;
 }
+
+.menu-align {
+  float: right;
+}

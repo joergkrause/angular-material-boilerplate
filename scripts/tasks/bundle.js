@@ -69,7 +69,7 @@ gulp.task('bundle:create', function () {
     .buildStatic('./dist/main.js', './dist/main.bundle.js', {
       sourceMaps: true,
       minify: true,
-      mangle: false,
+      mangle: true,
       rollup: true
     })
     .then(function () {

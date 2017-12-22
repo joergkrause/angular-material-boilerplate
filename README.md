@@ -17,22 +17,27 @@ The main focus is size of the final app. The project has two modes it can be com
 
 Even AoT is build on top of SystemJS and Gulp. The outcome is, of course, different:
 
-1. Classic Compilation using *tsc* and rollup with *systemJSBuilder*:
+1. Classic Compilation using *tsc* and rollup with *systemJSBuilder*. 
+
+The results with just one component and only icons and buttons are as small as this:
 
 * main.bundle.js.gz : 311 KB (all of Angular and my app) -- 1370 KB unzipped
 * vendor.js.gz : 59 KB (all polyfills) -- 182 KB unzipped
 * site.css : 7 KB (Material's CSS) -- 43 KB unzipped
 
-|          | Bundled | Minified| Mangled | Zipped  |
-|----------|---------|---------|---------|---------|
-| Bundled  |    x    |         |         |         |  
-|    +     |---------|---------|---------|---------|
-| Minified |         |    x    |         |         |
-|    +     |---------|---------|---------|---------|
-| Mangled  |         |         |    x    |         |
-|    +     |---------|---------|---------|---------| 
-| Zipped   |         |         |         |    x    | 
+To be more realistic, I have added more of the material controls, the router and four components (numbers in KB):
 
+|          | Raw     | Zipped  |
+|----------|---------|---------|
+| Bundled  | 5,884   | 877     |  
+|----------|---------|---------|
+| +        |         |         |
+| Minified | 2,130   | 424     |
+|----------|---------|---------|
+| +        |         |         |
+| Mangled  | 1,458   | 331     |
+
+The tree shaking (rollup) has almost no influence as the settings in SystemJS include only the stuff we really need anyway.
 
 2. AoT Compilation with *ngc* and rollup with *systemJSBuilder*:
 
