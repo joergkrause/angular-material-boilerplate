@@ -1,45 +1,33 @@
 <div>
   <mat-toolbar color="primary">
     <span><mat-icon>mood</mat-icon></span>
-
-    <span>Material 5 running in Angular 5!</span>
-
+    &nbsp;
+    <span>Material 5 running on Angular 5</span>
+    &nbsp;
     <button mat-icon-button [mat-menu-trigger-for]="menu">
       <mat-icon>more_vert</mat-icon>
     </button>
   </mat-toolbar>
   <mat-menu x-position="before" #menu="matMenu">
-    <button mat-menu-item>Option 1</button>
-    <button mat-menu-item>Option 2</button>
+    <mat-menu #menu="matMenu">
+      <button mat-menu-item routerLink="/forms">
+        <mat-icon>text format</mat-icon>
+        <span>Form Controls</span>
+      </button>
+      <button mat-menu-item routerLink="/indicator">
+        <mat-icon>fast forward</mat-icon>
+        <span>Indicator Controls</span>
+      </button>
+      <button mat-menu-item routerLink="/layout">
+        <mat-icon>picture in picture</mat-icon>
+        <span>Layout Controls</span>
+      </button>
+    </mat-menu>
   </mat-menu>
-
-  <mat-card>
-    <button mat-button>All</button>
-    <button mat-raised-button>Of</button>
-    <button mat-raised-button color="primary">The</button>
-    <button mat-raised-button color="accent">Buttons</button>
-  </mat-card>
-
+  <router-outlet></router-outlet>
   <span class="done">
     <button mat-fab>
       <mat-icon>check circle</mat-icon>
     </button>
   </span>
 </div>
-<button mat-icon-button [matMenuTriggerFor]="menu">
-  <mat-icon>more_vert</mat-icon>
-</button>
-<mat-menu #menu="matMenu">
-  <button mat-menu-item>
-    <mat-icon>dialpad</mat-icon>
-    <span>Redial</span>
-  </button>
-  <button mat-menu-item disabled>
-    <mat-icon>voicemail</mat-icon>
-    <span>Check voicemail</span>
-  </button>
-  <button mat-menu-item>
-    <mat-icon>notifications_off</mat-icon>
-    <span>Disable alerts</span>
-  </button>
-</mat-menu>
