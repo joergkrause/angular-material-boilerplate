@@ -9,7 +9,7 @@ import * as cmp from './shared/components/index';
 import routerConfig from './shared/configurations/router.configuration';
 
 @NgModule({
-  declarations: [cmp.SiteRootComponent, cmp.FormControlsComponent, cmp.IndicatorControlsComponent, cmp.LayoutControlsComponent ],
+  declarations: [cmp.SiteRootComponent, cmp.SiteHomeComponent, cmp.FormControlsComponent, cmp.IndicatorControlsComponent, cmp.LayoutControlsComponent ],
   imports: [BrowserModule, RouterModule.forRoot(routerConfig), MaterialPartsModule, BrowserAnimationsModule],
   bootstrap: [cmp.SiteRootComponent]
 

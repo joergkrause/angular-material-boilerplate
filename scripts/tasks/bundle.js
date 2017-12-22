@@ -24,12 +24,22 @@ gulp.task('bundle:create', function () {
       '@angular/platform-browser-dynamic': 'npm:@angular/platform-browser-dynamic/bundles/platform-browser-dynamic.umd.js',
       '@angular/router': 'npm:@angular/router/bundles/router.umd.js',
       '@angular/forms': 'npm:@angular/forms/bundles/forms.umd.js',
+      '@angular/material': 'npm:@angular/material/bundles/material.umd.js',
       '@angular/material/menu': 'npm:@angular/material/bundles/material.umd.js',
       '@angular/material/icon': 'npm:@angular/material/bundles/material.umd.js',
       '@angular/material/core': 'npm:@angular/material/bundles/material.umd.js',
       '@angular/material/button': 'npm:@angular/material/bundles/material.umd.js',
       '@angular/material/toolbar': 'npm:@angular/material/bundles/material.umd.js',
       '@angular/material/card': 'npm:@angular/material/bundles/material.umd.js',
+      '@angular/material/datepicker': 'npm:@angular/material/bundles/material.umd.js',
+      '@angular/material/radio': 'npm:@angular/material/bundles/material.umd.js',
+      '@angular/material/checkbox': 'npm:@angular/material/bundles/material.umd.js',
+      '@angular/material/chips': 'npm:@angular/material/bundles/material.umd.js',
+      '@angular/material/list': 'npm:@angular/material/bundles/material.umd.js',
+      '@angular/material/input': 'npm:@angular/material/bundles/material.umd.js',
+      '@angular/material/form-field': 'npm:@angular/material/bundles/material.umd.js',
+      '@angular/material/select': 'npm:@angular/material/bundles/material.umd.js',
+      '@angular/material/progress-spinner': 'npm:@angular/material/bundles/material.umd.js',
       '@angular/cdk': 'npm:@angular/cdk/bundles/cdk.umd.js',
       '@angular/cdk/a11y': 'npm:/@angular/cdk/bundles/cdk-a11y.umd.js',
       '@angular/cdk/accordion': 'npm:/@angular/cdk/bundles/cdk-accordion.umd.js',
@@ -59,7 +69,7 @@ gulp.task('bundle:create', function () {
     .buildStatic('./dist/main.js', './dist/main.bundle.js', {
       sourceMaps: true,
       minify: true,
-      mangle: true,
+      mangle: false,
       rollup: true
     })
     .then(function () {

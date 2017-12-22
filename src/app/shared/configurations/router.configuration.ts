@@ -5,7 +5,12 @@ import * as cmp from '../components/index';
 const routes: Routes = [
   {
     path: '',
-    pathMatch: 'full'
+    pathMatch: 'full',
+    redirectTo: 'home'
+  },
+  {
+    component: cmp.SiteHomeComponent,
+    path: 'home'
   },
   {
     component: cmp.FormControlsComponent,

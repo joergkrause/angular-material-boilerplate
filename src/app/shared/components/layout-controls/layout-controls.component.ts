@@ -6,5 +6,5 @@ import { Component } from '@angular/core';
   templateUrl: './layout-controls.component.html'
 })
 export class LayoutControlsComponent  {
-
+  typesOfShoes = ['Boots', 'Clogs', 'Loafers', 'Moccasins', 'Sneakers'];
 }
