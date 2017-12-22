@@ -49,7 +49,7 @@ The results with just one component and only icons and buttons are as small as t
 
 To be more realistic, I have added more of the material controls, the router and four components (numbers in KB):
 
-The bundled, minified, mangled, and zipped version is then: **272 KB**. Definitly an acceptable result.
+The bundled, minified, mangled, and zipped version is then: **272 KB**. Definitly an acceptable result. However, it needed some code tweaking to make in working (while the classic version works immediately). Is 60 KB worth the extra trouble for you?
 
 This is slightly smaller and loads slightly faster. The difference is not revolutionary, but it's there. In fact, although you’re able to get rid of the compiler, AoT can increases your bundle size. What AoT does is to generate code for your templates and DI, so if you **have a lot of components** the JavaScript generated for the templates may **exceed** the size of the compiler. This is why we need both options.
 
