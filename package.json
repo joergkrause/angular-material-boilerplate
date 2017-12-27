@@ -1,7 +1,7 @@
 {
-  "name": "bns",
+  "name": "angular-material-boilerplate",
   "version": "1.0.0",
-  "description": "",
+  "description": "A demo project for Angular5, Material 5 and Flex Layout with Gulp/SystemJs bundling and treeshaking and optional AoT.",
   "main": "index.js",
   "scripts": {
     "build": "gulp clean && tsc && gulp",
@@ -9,7 +9,7 @@
     "start": "http-server ./dist -p 3001 -g -o index.html",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "author": "",
+  "author": "Joerg <isageek> Krause",
   "license": "ISC",
   "dependencies": {
     "@angular/animations": "^5.1.1",
