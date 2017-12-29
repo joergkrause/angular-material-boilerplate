@@ -49,7 +49,6 @@ var copyfav = gulp.task('copy:fav', function () {
 
 var copycss = gulp.task('copy:css', function () {
   return gulp.src([
-    './node_modules/material-design-icons/iconfont/material-icons.css',
     './node_modules/material-design-icons/iconfont/MaterialIcons-Regular.svg',
     './node_modules/material-design-icons/iconfont/MaterialIcons-Regular.woff',
     './node_modules/material-design-icons/iconfont/MaterialIcons-Regular.woff2'
