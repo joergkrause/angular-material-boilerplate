@@ -1,5 +1,9 @@
 @import './node_modules/@angular/material/prebuilt-themes/indigo-pink';
 
+body {
+  font-family: Roboto,"Helvetica Neue",sans-serif;
+}
+
 mat-toolbar-row {
   justify-content: space-between;
 }
@@ -8,4 +12,8 @@ mat-toolbar-row {
   position: fixed;
   bottom: 20px;
   right: 20px;
+}
+
+.spacer {
+  flex: 1 1 auto;
 }

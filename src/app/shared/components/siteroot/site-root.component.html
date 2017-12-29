@@ -6,7 +6,7 @@
     &nbsp;
     <span>Material 5 running on Angular 5</span>
     <span class="spacer"></span>
-    <div class="menu-align">
+    <div>
       <button mat-icon-button [mat-menu-trigger-for]="menu">
         <mat-icon>more_vert</mat-icon>
       </button>
@@ -28,8 +28,16 @@
   </mat-toolbar>
   <router-outlet></router-outlet>
   <span class="done">
-    <button mat-fab>
-      <mat-icon>check circle</mat-icon>
+    <button mat-fab [mat-menu-trigger-for]="sideMenu">
+      <mat-icon>home</mat-icon>
     </button>
   </span>
+  <mat-menu #sideMenu="matMenu">
+    <button mat-menu-item routerLink="/help">
+      <mat-icon>help</mat-icon>
+    </button>
+    <button mat-menu-item routerLink="/about">
+      <mat-icon>account_circle</mat-icon>
+    </button>
+  </mat-menu>
 </div>

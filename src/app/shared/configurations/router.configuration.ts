@@ -23,7 +23,16 @@ const routes: Routes = [
   {
     component: cmp.IndicatorControlsComponent,
     path: 'indicator'
+  },
+  {
+    component: cmp.SiteHelpComponent,
+    path: 'help'
+  },
+  {
+    component: cmp.SiteAboutComponent,
+    path: 'about'
   }
+
 ];
 
 export const routerModule = RouterModule.forRoot(routes);

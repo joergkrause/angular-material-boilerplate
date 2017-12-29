@@ -41,6 +41,12 @@ var copyhtm = gulp.task('copy:html', function () {
     .pipe(gulp.dest('./dist/app'));
 });
 
+var copyfav = gulp.task('copy:fav', function () {
+  return gulp.src('./src/assets/favicon.ico')
+    .pipe(print())
+    .pipe(gulp.dest('./dist'));
+});
+
 var copycss = gulp.task('copy:css', function () {
   return gulp.src([
     './node_modules/material-design-icons/iconfont/material-icons.css',
@@ -57,3 +63,4 @@ exports.copyjs = copyjs;
 exports.copyhtm = copyhtm;
 exports.copyidx = copyidx;
 exports.copyng = copyng;
+exports.copyfav = copyfav;
